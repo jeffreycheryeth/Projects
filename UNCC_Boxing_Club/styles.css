@@ -1,0 +1,449 @@
+/*General Layout (All Pages)*/
+html{
+    --primCol:#dc071c;
+    --content-height: 0px;
+    /* rgb(140, 5, 5); */
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    grid-template-columns: 0% 100% 0%;
+    grid-template-rows: 6rem 1fr 4rem ;  
+    font-family:'Times New Roman', Times, serif;
+    min-height: 100vh;
+}
+header{
+    background-color: var(--primCol);
+    color:aliceblue;
+    grid-area:1/1/2/4;
+    position:static;
+    top:0;
+    display:flex;
+    flex-direction: column; 
+    justify-content: space-evenly;
+}
+nav ul{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+main{
+    grid-area: 2/2/3/3;
+    background: linear-gradient(to left,#048cb1,#51fdd2);
+}
+footer{
+    grid-area: 3/1/4/4;
+    background-color: var(--primCol);
+    color:aliceblue;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+ul{
+    list-style-type:none;
+}
+nav li.a{
+    background-image: url(../UNCC_Boxing_Club/images/aboutusicon.png);
+    background-repeat: no-repeat;
+    background-size: 1em 1em;
+    padding-left: 1.5em;
+    background-position: 0 0.2em;
+}
+nav li.b{
+    background-image: url(../UNCC_Boxing_Club/images/membershipsicon.png);
+    background-repeat: no-repeat;
+    background-size: 1em 1em;
+    padding-left: 1.5em;
+    background-position: 0 0.2em;
+}
+nav li.c{
+    background-image: url(../UNCC_Boxing_Club/images/eventsicon.png);
+    background-repeat: no-repeat;
+    background-size: 1em 1em;
+    padding-left: 1.5em;
+    background-position: 0 0.2em;
+}
+nav li.d{
+    background-image: url(../UNCC_Boxing_Club/images/homeicon.png);
+    background-repeat: no-repeat;
+    background-size: 1em 1em;
+    padding-left: 1.5em;
+    background-position: 0 0.2em;
+}
+.homeimg{
+    width:100%;
+    height: 70vh;
+    overflow: hidden;
+}
+.homeimg img{
+    width:100vw;
+    height:100%;
+}
+nav a:hover{color: black;}
+nav a{
+    color: aliceblue;
+}
+.sep{
+    font-weight: bolder;
+}
+.copyright{
+    padding-top: 5px;
+}
+.fa-brands:hover{
+    color:black;
+}
+.fa-brands{
+    color: aliceblue;
+}
+
+/*Home-Main and About us*/
+.head2{
+    padding-top: 20px;
+    text-align: center;
+    color: #05405a;
+}
+.para1{
+    padding-left: 40px;
+    padding-top:5px;
+}
+.div1{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.div1.drop{
+    padding-bottom: 60px;
+}
+.div1.drop2{
+    padding-bottom: 40px;
+}
+.head3{
+    text-decoration: underline;
+    padding-left: 40px;
+    padding-top:40px;
+    color: var(--primCol);
+}
+.float{
+    padding-top: 40px;
+}
+.float1{
+    margin-left: 40px;
+}
+.head4{
+    color: red;
+}
+/*About Us-Main*/
+.para2{
+    padding-left: 40px;
+    padding-top:20px;
+    color: #05405a;
+}
+/*Memberships-Main*/
+hr{
+    border:none;
+    margin: 10px;
+    background-color: var(--primCol);
+    height:7px;
+}
+.register{
+    border-radius: 10px;
+    margin-left: 40px;
+    margin-top:20px;
+    background-color: #05405a;
+    display: inline-block;
+    padding: 10px;
+}
+.head5{
+    color: #fff;
+}
+.col{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 10px;
+    width:100%
+
+}
+a[href="#reg"]{
+    color:white;
+    text-decoration: none;
+}
+.pp{
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+.textCont1{
+    flex-grow:1;
+}
+.textCont.tp{
+    padding: 10px;
+    border: 3px solid white;
+}
+.textCont.tp.ad{
+    width:350px;
+    background-color: #05405a;
+}
+.textCont.tp.bd{
+    background-color:  #05405a;
+}
+.textCont.tp.cd{
+    background-color: #05405a;
+    width:350px;
+}
+.litxt{
+    color:antiquewhite;
+    font-size: 20px;
+    padding: 30px;
+}
+.formCont{
+    background-color: #05405a;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0.6rem;
+    border-radius:10px;
+    box-shadow:0px 5px 10px 0px rgb(4, 4, 84);
+}
+input[type="text"], input[type="email"]{
+    border:2px solid var(--primCol);
+    margin-bottom:0.5rem;
+    width:100%;
+    padding:0.6rem;
+}
+input[type="submit"]{
+    background-color: var(--primCol);
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+}
+/*Events-Main*/
+.dv{
+    padding-top: 10px;
+    padding-left: 40px;
+    color: #05405a;
+}
+.carousel-container{
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+.carousel{
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.carousel-item{
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right:0;
+    transition: 300ms opacity ease-in-out;
+    transition-delay: 300ms;
+}
+.carousel-item.active{
+    opacity: 1;
+    transition-delay: 0ms;
+}
+.carousel-item > img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.carousel-btn{
+    background: transparent;
+    border: none;
+    font-weight: 900;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+.carousel-btn.left{
+    left: 3%;
+}
+.carousel-btn.right{
+    right: 3%;
+}
+.carousel-btn:hover{
+    cursor: pointer;
+    background-color: #05405a;
+    color: white;
+}
+.carousel-nav{
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+    gap: 0.5rem;
+    opacity: 0.3rem;
+}
+.nav-item{
+    height: 11px;
+    width: 11px;
+    background-color: black;
+    border-radius: 50%;
+    opacity: 0.3;
+
+    transition: 300ms opacity ease-in-out;
+}
+.nav-item.active{
+    opacity: 0.7;
+}
+.head6{
+        color: rgb(158, 244, 220);
+}
+.accordion-label{
+    width:100%;
+    font-size: 1.2rem;
+    padding: 1rem 0.5rem;
+    text-align: center;
+    background-color: #05405a;
+    align-items: center;
+    opacity: 0.7;
+    border: none;
+    color: white;
+    position: relative;
+    transition: opacity 0.5s ease-out;
+
+}
+.accordion-content{
+    margin-bottom: 0.5rem;
+    padding: 0px 10px;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+}
+.accordion-content.open{
+    height: var(--content-height);
+    overflow: auto;
+}
+.accordion-label.open{
+    opacity: 1;
+}
+.accordion-label::after{
+    content: '+';
+    position: absolute;
+    right: 1rem;
+    top: 40%;
+    font-size: 1.2rem;
+}
+.accordion-label.open::after{
+    content: '-';
+    font-size: 1.5rem;
+}
+.tab{
+    display: flex;
+    justify-content: center;
+    overflow:hidden;
+    border: 1px solid #ccc;
+    background-color: #05405a;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.tab button{
+    background-color: inherit;
+    float: left;
+    border: 1px solid black;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    color:#fff;
+}
+.tab button:hover{
+    background-color: #09daff;
+}
+.tab button.active{
+    background-color: #09daff;
+}
+.tabcontent{
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+.active{
+    display:block;
+}
+.tabcontent{
+    animation: fadeEffect 1s;
+}
+@keyframes fadeEffect{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+.boxingpara{
+    padding-left: 20px;
+    padding-top:5px;
+}
+#searchForm{
+    width: 90%;
+    margin: 1rem auto;
+    display: flex;
+    gap:0.5rem;
+    justify-content: center;
+}
+#boxing-year{
+    font-size: 1rem;
+    padding: 0.2em;
+    border-color:#05405a;
+    width:20%;
+    flex-basis: 400px;
+}
+#champion-info{
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    justify-content:space-between;
+    text-align: center;
+}
+.boxhead2{
+    text-decoration: underline;
+}
+.boxing-search{
+    height:30px;
+    align-items: center;
+    color: white;
+    font-size: 1rem;
+    padding: 0.2em 0.8em;
+    background-color: #05405a;
+    border: none;
+    border-radius: 3px;
+}
+.year{
+    padding-top: 10px;
+    font-size: large;
+    font-weight: bold;
+    padding-left: 40px;
+    color: #05405a;
+}
+.error.hidden{
+    display: none;
+}
+.error{
+    background: rgba(255, 102,51);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 20px;
+}
