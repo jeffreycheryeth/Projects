@@ -1,0 +1,24 @@
+<%- include('../partials/header.ejs')%> 
+<main>
+    <form class="user-form-css" action="/users/login" method="POST">
+        <div class="row">
+            <div class="col-25">
+                <label for="email">Email Address</label>
+            </div>
+            <div class="col-75">
+                <input id="email" name="email" type="email" placeholder="Email" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="password">Password</label>
+            </div>
+            <div class="col-75">
+                <input id="password" name="password" type="password" placeholder="Password" required>
+            </div>
+        </div>
+        <br>
+        <button><strong>Login</strong></button>  
+    </form>
+</main>
+<%- include('../partials/footer.ejs')%> 

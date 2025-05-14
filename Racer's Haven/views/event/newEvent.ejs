@@ -1,0 +1,74 @@
+<%- include('../partials/header.ejs')%>   
+    <main>
+        <h1 class="black">Create a New Event</h1><br>
+        <form class="event-form-css" action="/events" enctype="multipart/form-data" method="POST">
+            <div class="row">
+                <div class="col-25">
+                    <label for="category">Category</label>
+                </div>
+                <div class="col-75">
+                    <select name="category" id="category" required>
+                        <option value="">--Select a Category--</option>
+                        <option value="Cars and Coffee">Cars and Coffee</option>
+                        <option value="Car Show">Car Show</option>
+                        <option value="Touge Racing">Touge Racing</option>
+                        <option value="Drift">Drift</option>
+                        <option value="Autocross">Autocross</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="title">Title</label>
+                </div>
+                <div class="col-75">
+                    <input id="title" name="title" type="text" placeholder="Enter the title of the event" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="details">Details</label>
+                </div>
+                <div class="col-75">
+                    <textarea id="details" name="details" placeholder="Enter the details of the event" required minlength="10"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="location">Where</label>
+                </div>
+                <div class="col-75">
+                    <input id="location" name="location" type="text" placeholder="Enter where the event takes place" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="startDate">Start</label>
+                </div>
+                <div class="col-75">
+                    <input id="startDate" name="startDate" type="datetime-local" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="endDate">End</label>
+                </div>
+                <div class="col-75">
+                    <input id="endDate" name="endDate" type="datetime-local" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="image">Picture</label>
+                </div>
+                <div class="col-75">
+                    <input id="image" name="image" type="file" required>
+                </div>
+            </div>
+            <br>
+            <button type="submit"><strong>Create Event</strong></button>
+        </form>
+    </main>
+<%- include('../partials/footer.ejs')%> 
+

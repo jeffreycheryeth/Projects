@@ -1,0 +1,73 @@
+<%- include('../partials/header.ejs')%>
+<main>
+    <h1 class="black">Edit the Event</h1>
+    <form class="event-form-css" method = "POST" enctype="multipart/form-data" action="/events/<%= event._id %>?_method=PUT">
+        <div class="row">
+            <div class="col-25">
+                <label for="category">Category</label>
+            </div>
+            <div class="col-75">
+                <select name="category" id="category">
+                    <option value="<%= event.category %>"><%= event.category %></option>
+                    <option value="Cars and Coffee">Cars and Coffee</option>
+                    <option value="Car Show">Car Show</option>
+                    <option value="Touge Racing">Touge Racing</option>
+                    <option value="Drift">Drift</option>
+                    <option value="Autocross">Autocross</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="title">Title</label>
+            </div>
+            <div class="col-75">
+                <input id="title" name="title" type="text" value = "<%= event.title %>">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="details">Details</label>
+            </div>
+            <div class="col-75">
+                <textarea id="details" name="details" minlength="10"><%= event.details %></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="location">Where</label>
+            </div>
+            <div class="col-75">
+                <input id="location" name="location" type="text" value = "<%= event.location %>">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="startDate">Start</label>
+            </div>
+            <div class="col-75">
+                <input id="startDate" name="startDate" type="datetime-local" value = "<%= event.startDate%>">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="endDate">End</label>
+            </div>
+            <div class="col-75">
+                <input id="endDate" name="endDate" type="datetime-local" value = "<%= event.endDate %>">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="image">Picture</label>
+            </div>
+            <div class="col-75">
+                <input id="image" name="image" type="file">
+            </div>
+        </div>
+        <br>
+        <button><strong>Submit</strong></button>
+    </form>
+</main>
+<%- include('../partials/footer.ejs')%>

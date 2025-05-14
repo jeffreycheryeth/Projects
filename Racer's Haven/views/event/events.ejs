@@ -1,0 +1,74 @@
+<%- include('../partials/header.ejs')%>
+    <main >
+        <div class="category">
+            <% if(events.length) {%>
+                
+                <% const carsandcoffee = events.filter(e=>e.category === 'Cars and Coffee');%>
+                    <%if(carsandcoffee.length) {%>
+                    <div class="group">
+                        <h3>Cars and Coffee</h3>
+                        <img src="/images/carcoffee.jpg" alt="cars and coffee">
+                        <%carsandcoffee.forEach(event=>{%>
+                                <a href="/events/<%=event.id %>"><p><%= event.title %></p></a>
+                        <%});%>
+                    </div>
+                    <%}%>
+
+                    <% const carshow = events.filter(e=>e.category === 'Car Show');%>
+                    <%if(carshow.length) {%>
+                        <div class="group">
+                            <h3>Car Show</h3>
+                            <img src="/images/carshow.jpg" alt="car show">
+                            <%carshow.forEach(event=>{%>
+                                <a href="/events/<%=event.id %>"><p><%= event.title %></p></a>
+                            <%});%>
+                        </div>
+                    <%}%>
+
+                    <% const touge = events.filter(e=>e.category === 'Touge Racing');%>
+                    <%if(touge.length) {%>
+                        <div class="group">
+                            <h3>Touge Racing</h3>
+                            <img src="/images/touge.jpg" alt="touge racing">
+                            <%touge.forEach(event=>{%>
+                                <a href="/events/<%=event.id %>"><p><%= event.title %></p></a>
+                            <%});%>
+                        </div>
+                    <%}%>
+
+                    <% const drift = events.filter(e=>e.category === 'Drift');%>
+                    <%if(drift.length) {%>
+                        <div class="group">
+                            <h3>Drift</h3>
+                            <img src="/images/drift.jpg" alt="drift">
+                            <%drift.forEach(event=>{%>
+                                <a href="/events/<%=event.id %>"><p><%= event.title %></p></a>
+                            <%});%>
+                        </div>
+                    <%}%>
+
+                    <% const autocross = events.filter(e=>e.category === 'Autocross');%>
+                    <%if(autocross.length) { %>
+                        <div class="group">
+                            <h3>Autocross</h3>
+                            <img src="/images/autocross.jpg" alt="autocross">
+                            <%autocross.forEach(event=>{%>
+                                <a href="/events/<%=event.id %>"><p><%= event.title %></p></a>
+                            <%});%>
+                        </div>
+                    <%}%>
+
+                    <% const other= events.filter(e=>e.category === 'Other');%>
+                    <%if(other.length) { %>
+                        <div class="group">
+                            <h3>Other</h3>
+                            <img src="/images/other.jpeg" alt="cars images">
+                            <%other.forEach(event=>{%>
+                                <a href="/events/<%=event.id %>"><p><%= event.title %></p></a>
+                            <%});%>
+                        </div>
+                    <%}%>
+                <%}%>
+        </div>
+    </main>
+<%- include('../partials/footer.ejs')%> 

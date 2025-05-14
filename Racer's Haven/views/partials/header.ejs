@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Racer's Haven</title>
+</head>
+<body>
+    <header>
+        <a href="/"><img src="/images/logo.png" alt="Racer's Haven Logo" height="110" width="110"></a>
+        <h1>Racer's Haven</h1>
+        <nav>
+            <ul>
+                <%if (!user) {%>
+                <li><a href="/users/login" class="border">Login</a></li>
+                <li><a href="/users/new" class="border">Sign Up</a></li>
+                <%} else {%>
+                <li><a href="/events/new" class="border">New Event</a></li>
+                <li><a href="/users/profile" class="border"><%=user.firstName%>'s Profile</a></li>
+                <li><a href="/users/logout" class="border">Logout</a></li>
+                <%}%>
+            </ul>
+        </nav>
+    </header>
+    <nav class="nav2">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/events">Events</a></li>
+        </ul>
+    </nav>
+
+    <% if(errorMessages.length > 0) {%>
+        <% errorMessages.forEach(message=>{%>
+            <div class='error'>
+                <%=message%>
+            </div>
+        <%});%>
+    <%}%>
+   
+    <% if(successMessages.length > 0) {%>
+        <% successMessages.forEach(message=>{%>
+            <div class='success'>
+                <%=message%>
+            </div>
+        <%});%>
+    <%}%>
+
